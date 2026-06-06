@@ -12,7 +12,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
 
 <style>
-/* ── Reset & Base ─────────────────────────────────── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
@@ -24,8 +23,6 @@
   --muted:  rgba(255,255,255,.35);
   --card:   rgba(255,255,255,.03);
   --border: rgba(255,215,0,.08);
-
-  /* Platform colors */
   --fb: #1877F2;
   --ig: #E1306C;
   --tt: #FF0050;
@@ -45,12 +42,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── Scrollbar ────────────────────────────────────── */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
 
-/* ── Background ───────────────────────────────────── */
 .bg {
   position: fixed;
   inset: 0;
@@ -72,7 +67,6 @@ body {
   background-size: 50px 50px;
 }
 
-/* ── Layout ───────────────────────────────────────── */
 main {
   position: relative;
   z-index: 1;
@@ -85,7 +79,6 @@ main {
   gap: 0;
 }
 
-/* ── Rank Badge ───────────────────────────────────── */
 .rank-badge {
   display: inline-flex;
   align-items: center;
@@ -105,7 +98,6 @@ main {
 
 .rank-stars { opacity: .7; }
 
-/* ── Profile ──────────────────────────────────────── */
 .profile {
   text-align: center;
   margin-bottom: 32px;
@@ -119,7 +111,6 @@ main {
   margin: 0 auto 18px;
 }
 
-/* Spinning gradient ring */
 .ring {
   position: absolute;
   inset: -4px;
@@ -174,7 +165,6 @@ h1 {
   min-height: 18px;
 }
 
-/* Typewriter cursor */
 .bio::after {
   content: '|';
   animation: blink .7s step-end infinite;
@@ -212,7 +202,6 @@ h1 {
   animation: ping 2s ease infinite;
 }
 
-/* ── Links ────────────────────────────────────────── */
 .links {
   width: 100%;
   display: flex;
@@ -236,7 +225,6 @@ h1 {
   animation: fadeUp .5s ease both;
 }
 
-/* Left accent bar */
 .card::before {
   content: '';
   position: absolute;
@@ -249,7 +237,6 @@ h1 {
   opacity: .7;
 }
 
-/* Hover shimmer */
 .card::after {
   content: '';
   position: absolute;
@@ -309,11 +296,8 @@ h1 {
 }
 
 .card:hover .arr { transform: translateX(-3px); color: var(--accent); }
-
-/* Platform hover glow */
 .card:hover { border-color: color-mix(in srgb, var(--accent) 20%, transparent); }
 
-/* ── Equalizer ────────────────────────────────────── */
 .eq {
   display: flex;
   align-items: flex-end;
@@ -332,7 +316,6 @@ h1 {
   animation: eq var(--d, .8s) ease-in-out infinite alternate;
 }
 
-/* ── Footer ───────────────────────────────────────── */
 footer {
   margin-top: 24px;
   text-align: center;
@@ -343,7 +326,6 @@ footer {
 
 footer span { color: var(--fire); }
 
-/* ── Animations ───────────────────────────────────── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(18px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -366,7 +348,6 @@ footer span { color: var(--fire); }
   to   { height: var(--h2, 18px); }
 }
 
-/* ── Responsive ───────────────────────────────────── */
 @media (max-width: 400px) {
   main { padding: 36px 12px 52px; }
   .avatar-wrap { width: 95px; height: 95px; }
@@ -376,7 +357,6 @@ footer span { color: var(--fire); }
   .info-name { font-size: 13px; }
 }
 
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: .01ms !important;
@@ -483,7 +463,7 @@ footer span { color: var(--fire); }
       <span class="arr">←</span>
     </a>
 
-    <a href="https://www.youtube.com/@btash1m"
+    <a href="https://www.youtube.com/@بطاش_قيمر"
        target="_blank" rel="noopener noreferrer"
        class="card" style="--accent:var(--yt); animation-delay:.7s">
       <div class="icon">
@@ -499,7 +479,6 @@ footer span { color: var(--fire); }
 
   </section>
 
-  <!-- Equalizer decoration -->
   <div class="eq" aria-hidden="true">
     <span style="--d:.6s;--h1:4px;--h2:16px"></span>
     <span style="--d:.8s;--h1:8px;--h2:20px"></span>
@@ -517,7 +496,6 @@ footer span { color: var(--fire); }
 </main>
 
 <script>
-// Typewriter
 (function () {
   const phrases = [
     'Free Fire Player 🔥',
